@@ -6,7 +6,7 @@ SetKeyDelay, -1
 ; yes no box that brings up 2 more boxes on startup
 MsgBox, 4,, 
 (
-Welcome to HCS!
+Welcome to HCS! trademark shaun
 You can bring this window up by pressing  CTRL + Numpad0
 Would you like to see the manual?
 
@@ -20,9 +20,11 @@ Numpad0-4, Numpad6-9 = Custom colors (explained later)
 
 Numpad5 = Pause the entire script (prevents numpad keys and other assigned hotkeys from functioning) 
 
-" - " = AFK auto-typer, " = " stops the auto-typer. 
+typing " "afk " = AFK auto-typer, " = " stops the auto-typer. 
 
 Custom commands are work in progress, try " "rainbowred ". press CTRL + 0 to stop it (buggy)
+
+"lagg = copypasta "rainbowred/blue = rainbow avatar script
 
 Would you like to see the custom colours description?
 )
@@ -43,7 +45,7 @@ Numpad8 = Blank no team colors (Greyscale) Numpad9 = Inverted team colors
 )
 return
 
-; same thing but with a hotkey
+; same thing but with a hotkey because i suck at ahk
 Ctrl & Numpad0::
 MsgBox, 4,, 
 (
