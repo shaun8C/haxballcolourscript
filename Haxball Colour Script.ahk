@@ -3,7 +3,7 @@
 ; vvvv this line allows the commands to be typed near-instantly by setting the delay between each keypress to be 0
 SetKeyDelay, -1
 
-; yes no box that brings up 2 more boxes on startup
+; yes no box that brings up 2 more boxes on startup because i cant ui
 MsgBox, 4,, 
 (
 Welcome to HCS! trademark shaun
