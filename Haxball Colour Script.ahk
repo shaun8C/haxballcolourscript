@@ -1,5 +1,6 @@
-; haxball colors script V3.2
+; haxball colors script V4.5
 ; code by shaun :D
+; you need to be host/admin to use these commands.
 ; vvvv this line allows the commands to be typed near-instantly by setting the delay between each keypress to be 0
 SetKeyDelay, -1
 
@@ -7,8 +8,8 @@ SetKeyDelay, -1
 MsgBox, 4,, 
 (
 Welcome to HCS! trademark shaun
-You can bring this window up by pressing  CTRL + Numpad0
 Would you like to see the manual?
+(higly recommended)
 
 )
 ifMsgBox No
@@ -20,11 +21,7 @@ Numpad0-4, Numpad6-9 = Custom colors (explained later)
 
 Numpad5 = Pause the entire script (prevents numpad keys and other assigned hotkeys from functioning) 
 
-typing " "afk " = AFK auto-typer, " = " stops the auto-typer. 
-
-Custom commands are work in progress, try " "rainbowred ". press CTRL + 0 to stop it (buggy)
-
-"lagg = copypasta "rainbowred/blue = rainbow avatar script
+"rainbowred/blue = rainbow avatar script
 
 Would you like to see the custom colours description?
 )
@@ -45,48 +42,25 @@ Numpad8 = Blank no team colors (Greyscale) Numpad9 = Inverted team colors
 )
 return
 
-; same thing but with a hotkey because i suck at ahk
-Ctrl & Numpad0::
-MsgBox, 4,, 
-(
-Welcome to HCS!
-You can bring this window up by pressing  CTRL + Numpad0
-`Would you like to see the manual?
 
-)
-ifMsgBox No
-return
-ifMsgBox Yes
-MsgBox, 4,,
-(
-Numpad0-4, Numpad6-9 = Custom colors (explained later)
-
-Numpad5 = Pause the entire script (prevents numpad keys and other assigned hotkeys from functioning) 
-
-" - " = AFK auto-typer, " = " stops the auto-typer. 
-
-Custom commands are work in progress, try " "rainbowred ". press CTRL + 0 to stop it (buggy)
-
-Would you like to see the custom colours description?
-)
-ifMsgBox No
-return
-ifMsgBox yes
-MsgBox, 
-(
-
-Numpad1 = Red & Blue colors. Numpad2 = Black and white + team colors.
-
-Numpad3 = Bubblegum colors. Numpad4 = Aesthetic and light colors.
-
-Numpad6 = Yellow and Green colors. Numpad7 = Triple team color gradients
-
-Numpad8 = Blank no team colors (Greyscale) Numpad9 = Inverted team colors
-
-)
-return
-
+::"kcar::
+  Send /colors red 90 FCFCFC E3E3E3
+  Send {Enter}
+  Send {Enter}
+  Send /colors blue 60 E3E7EE 5D72B3
+  Send {Enter}
+  return
+  
+  ::"kblack::
+  Send /colors red 90 FCFCFC E3E3E3
+  Send {Enter}
+  Send {Enter}
+  Send /colors blue 60 E3E7EE 5D72B3
+  Send {Enter}
+  return
+  
 ; standard colors for red and blue
+
 Numpad1::
   Send {Enter}
   Send /colors red 60 FFFFFF E66E56
@@ -152,10 +126,10 @@ Return
 ; no team colors
 Numpad8::
   Send {Enter}
-  Send /colors blue 60 D9D9D9 EFF5ED
+  Send /colors red 60 E0E0E0 A3A3A3
   Send {Enter}
   Send {Enter}
-  Send /colors red 60 D9D9D9 EFF5ED
+  Send /colors red 60 E0E0E0 A3A3A3
   Send {Enter}
 Return
 
@@ -167,6 +141,8 @@ Numpad9::
   Send {Enter}
   Send /colors red 60 FFFFFF 588CEB
   Send {Enter}
+  ; /colors blue 60 FFFFFF E66E56
+  ; /colors red 60 FFFFFF 588CEB
 Return
 
 ; avatar text displaying "FUCK_YOU" then going back to the original
@@ -211,23 +187,6 @@ Numpad0::
   Send {Enter}
 Return
 */
-
-; looping message for AFKing, 4000 = 4 sec
-::"afk::
-  $stop := 0
-  Loop, 
-  { 
-    Send {Enter}
-    Send This is an automated message. I am AFK, will be back soon{!}
-	Send {Enter}
-    Sleep 4000
-    if ($stop)
-    {
-      return
-    }
-  }
-; key = to stop the loop
-=:: $stop := 1
 
 ; hotstring test, work in progress
 ::"rainbowred::
@@ -360,10 +319,6 @@ return
 	Send {Enter}
     return
     
-;command/hotstring test, nothing noteworthy.
-::!test::lineone{enter}{enter}linetwo{enter}{enter}linethree{enter}{enter}linefour
-
-::"lagg::Shut the fuck up. Just shut your fucking mouth you degenerate retard. You bumbling idiot. You buffoon.{enter}{enter} Stop crying about lag in chat you fucking clown. Please. I can clearly tell that youre lagging so theres no need to keep posting it in chat.{enter}{enter} I can see your ping, i can see my wifis bad, i can see you lagged out. What the fuck is the point of crying lag then? Will it fix this minor inconvenience?{enter}{enter} Do you think saying lag like a child will help anything? Fucking grow up you ape-brained shit-tard and calm down a little bit.{enter}{enter} Just breathe in... And breathe out... Breathe in... Out... any better now? Still butthurt??
 return
 ; notable colors: (mostly on red, just change accordingly)
 ; background: /colors red 60 718C5A 718C5A
