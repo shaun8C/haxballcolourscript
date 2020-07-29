@@ -45,13 +45,6 @@ z = fake chat
 )
 return
 
-
-Rando(Min := 1, Max := 52) {
-    Random,_Random, % Min, % Max
-    Return _Random
-}
-return
-
 ; on and off switch for the entire script
 Numpad0:: Suspend
 
