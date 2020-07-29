@@ -131,7 +131,6 @@ return
   $stop := 0
   Loop, 
   { 
-    Send {Enter}
     Send This is an automated message. I am AFK, will be back soon{!}
 	Send {Enter}
     Sleep 4000
